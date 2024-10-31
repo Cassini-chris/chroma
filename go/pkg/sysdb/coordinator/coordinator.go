@@ -91,6 +91,10 @@ func (s *Coordinator) GetCollections(ctx context.Context, collectionID types.Uni
 	return s.catalog.GetCollections(ctx, collectionID, collectionName, tenantID, databaseName, limit, offset)
 }
 
+func (s *Coordinator) DeleteCollectionAndSegments(ctx context.Context, deleteCollection *model.DeleteCollection, segmentIDs []types.UniqueID) error {
+	return s.catalog.DeleteCollectionAndSegments(ctx, deleteCollection, segmentIDs)
+}
+
 func (s *Coordinator) DeleteCollection(ctx context.Context, deleteCollection *model.DeleteCollection) error {
 	return s.catalog.DeleteCollection(ctx, deleteCollection)
 }
