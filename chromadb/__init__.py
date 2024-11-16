@@ -119,7 +119,7 @@ def EphemeralClient(
         settings = Settings()
     settings.is_persistent = False
 
-    # Make sure paramaters are the correct types -- users can pass anything.
+    # Make sure parameters are the correct types -- users can pass anything.
     tenant = str(tenant)
     database = str(database)
 
@@ -146,7 +146,7 @@ def PersistentClient(
     settings.persist_directory = path
     settings.is_persistent = True
 
-    # Make sure paramaters are the correct types -- users can pass anything.
+    # Make sure parameters are the correct types -- users can pass anything.
     tenant = str(tenant)
     database = str(database)
 
@@ -292,7 +292,7 @@ def CloudClient(
     if settings is None:
         settings = Settings()
 
-    # Make sure paramaters are the correct types -- users can pass anything.
+    # Make sure parameters are the correct types -- users can pass anything.
     tenant = str(tenant)
     database = str(database)
     api_key = str(api_key)
@@ -327,7 +327,7 @@ def Client(
     database: The database to use for this client. Defaults to the default database.
     """
 
-    # Make sure paramaters are the correct types -- users can pass anything.
+    # Make sure parameters are the correct types -- users can pass anything.
     tenant = str(tenant)
     database = str(database)
 
